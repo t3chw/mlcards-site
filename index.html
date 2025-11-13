@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MLCards – Machine Learning Flashcards for Interview Prep</title>
+  <meta name="description" content="Swipe through machine learning and data science flashcards. Learn ML concepts fast. Download the MLCards app today." />
+  <link rel="canonical" href="https://mlcards.co/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mlcards.co/" />
+  <meta property="og:title" content="MLCards – Learn Machine Learning Fast" />
+  <meta property="og:description" content="Swipeable ML & Data Science flashcards. Perfect for interview prep." />
+  <meta property="og:image" content="https://mlcards.co/assets/preview.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MLCards – Learn Machine Learning Fast" />
+  <meta name="twitter:description" content="Swipeable ML & Data Science flashcards. Perfect for interview prep." />
+  <meta name="twitter:image" content="https://mlcards.co/assets/preview.png" />
+
+  <!-- Favicons (replace with your own) -->
+  <link rel="icon" href="/assets/logo.png" />
+
+  <!-- App structured data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "MLCards",
+    "operatingSystem": "Android",
+    "applicationCategory": "Education",
+    "offers": { "@type": "Offer", "price": "0" },
+    "url": "https://mlcards.co",
+    "installUrl": "https://play.google.com/store/apps/details?id=com.mlcards",
+    "description": "Swipe flashcards to master Machine Learning, AI, and Data Science concepts quickly."
+  }
+  </script>
+
+  <!-- Minimal CSS for speed -->
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin:0; color:#0f172a; }
+    header { padding: 32px 16px; max-width: 1100px; margin: 0 auto; display:flex; align-items:center; gap:12px; }
+    header img { width: 40px; height: 40px; border-radius: 8px; }
+    nav a { margin-left: 16px; color:#0f172a; text-decoration:none; font-weight:600; }
+    .hero { max-width:1100px; margin: 24px auto; padding: 16px; display:grid; grid-template-columns: 1.1fr 0.9fr; gap:24px; align-items:center; }
+    .hero h1 { font-size: 44px; line-height: 1.1; margin: 0 0 16px; }
+    .hero p { font-size: 18px; color:#334155; }
+    .cta { display:inline-block; background:#0ea5e9; color:white; padding: 12px 18px; border-radius:10px; font-weight:700; text-decoration:none; }
+    .subcta { margin-left: 12px; color:#0369a1; font-weight:600; }
+    .features { max-width:1100px; margin: 24px auto; padding: 0 16px 40px; display:grid; grid-template-columns: repeat(3,1fr); gap:16px; }
+    .card { border:1px solid #e2e8f0; border-radius:12px; padding:16px; }
+    .footer { border-top:1px solid #e2e8f0; color:#475569; padding:24px 16px; text-align:center; }
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .features { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 34px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="/assets/logo.png" alt="MLCards logo" />
+    <strong>MLCards</strong>
+    <nav style="margin-left:auto">
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Learn Machine Learning the Smart Way</h1>
+      <p>Swipe through concise flashcards covering Machine Learning, AI, and Data Science. Master interview concepts with spaced repetition and quick drills.</p>
+      <p>
+        <a class="cta" href="https://play.google.com/store/apps/details?id=com.mlcards" rel="noopener" target="_blank">Get it on Google Play</a>
+        <a class="subcta" href="#features">See features ↓</a>
+      </p>
+    </div>
+    <div>
+      <img src="/assets/preview.png" alt="Preview of the MLCards app interface" style="width:100%; border-radius:16px; border:1px solid #e2e8f0;" />
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <div class="card">
+      <h3>Interview‑Ready</h3>
+      <p>Key ML algorithms, model tuning, metrics, and system design flashcards.</p>
+    </div>
+    <div class="card">
+      <h3>Swipe & Retain</h3>
+      <p>Spaced repetition and bite‑sized learning built for speed.</p>
+    </div>
+    <div class="card">
+      <h3>Offline Friendly</h3>
+      <p>Review concepts anytime. Perfect for commutes and quick breaks.</p>
+    </div>
+  </section>
+
+  <section id="faq" class="features" style="grid-template-columns:1fr;">
+    <div class="card">
+      <h3>FAQ</h3>
+      <p><strong>Is MLCards free?</strong> Yes. Some advanced decks may be premium later.</p>
+      <p><strong>Do you support iOS?</strong> Android first. iOS later based on demand.</p>
+      <p><strong>How often is content updated?</strong> We add new decks every week (algorithms, ML ops, stats, SQL).</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    © <span id="y"></span> MLCards • <a href="/privacy.html">Privacy</a>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
