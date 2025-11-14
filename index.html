@@ -49,6 +49,10 @@
     .hero p { font-size: 18px; color:#334155; }
     .cta { display:inline-block; background:#0ea5e9; color:white; padding: 12px 18px; border-radius:10px; font-weight:700; text-decoration:none; }
     .subcta { margin-left: 12px; color:#0369a1; font-weight:600; }
+    .banner-section { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 48px 0; margin: 40px 0; overflow: hidden; }
+    .banner-container { max-width: 1400px; margin: 0 auto; padding: 0 16px; }
+    .banner-container h2 { text-align: center; font-size: 32px; margin: 0 0 32px; color: #0f172a; }
+    .banner-img { width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
     .features { max-width:1100px; margin: 24px auto; padding: 0 16px 40px; display:grid; grid-template-columns: repeat(3,1fr); gap:16px; }
     .card { border:1px solid #e2e8f0; border-radius:12px; padding:16px; }
     .footer { border-top:1px solid #e2e8f0; color:#475569; padding:24px 16px; text-align:center; }
@@ -56,6 +60,8 @@
       .hero { grid-template-columns: 1fr; }
       .features { grid-template-columns: 1fr; }
       .hero h1 { font-size: 34px; }
+      .banner-container h2 { font-size: 24px; margin: 0 0 24px; }
+      .banner-section { padding: 32px 0; margin: 24px 0; }
     }
   </style>
 </head>
@@ -81,6 +87,13 @@
     </div>
     <div>
       <img src="/assets/preview.png" alt="Preview of the MLCards app interface" style="width:100%; border-radius:16px; border:1px solid #e2e8f0;" />
+    </div>
+  </section>
+
+  <section class="banner-section">
+    <div class="banner-container">
+      <h2>Everything You Need to Master ML & Data Science</h2>
+      <img class="banner-img" src="/assets/banner_first_version.jpg" alt="MLCards app features showcase - swipe flashcards, rich content with math and code, browse ML topics, search cards, save favorites, track progress, and beautiful LaTeX rendering" />
     </div>
   </section>
 
