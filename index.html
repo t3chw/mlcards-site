@@ -20,8 +20,9 @@
   <meta name="twitter:description" content="Swipeable ML & Data Science flashcards. Perfect for interview prep." />
   <meta name="twitter:image" content="https://mlcards.co/assets/preview.png" />
 
-  <!-- Favicons (replace with your own) -->
-  <link rel="icon" href="/assets/logo.png" />
+  <!-- Favicons -->
+  <link rel="icon" href="/assets/final_logo.png" />
+  <link rel="apple-touch-icon" href="/assets/final_logo.png" />
 
   <!-- App structured data (Schema.org) -->
   <script type="application/ld+json">
@@ -52,43 +53,75 @@
     }
 
     header {
-      padding: 24px 32px;
-      max-width: 1400px;
-      margin: 0 auto;
+      padding: 20px 40px;
+      max-width: 1280px;
+      margin: 24px auto;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: sticky;
+      top: 20px;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(20px);
+      z-index: 100;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(124, 58, 237, 0.3), 0 0 0 1px rgba(124, 58, 237, 0.1);
+      transition: all 0.3s ease;
+    }
+    header:hover {
+      box-shadow: 0 15px 50px rgba(124, 58, 237, 0.4), 0 0 0 1px rgba(124, 58, 237, 0.2);
+      transform: translateY(-2px);
+    }
+    .header-logo-wrapper {
       display: flex;
       align-items: center;
       gap: 16px;
-      position: sticky;
-      top: 0;
-      background: rgba(139, 92, 246, 0.95);
-      backdrop-filter: blur(20px);
-      z-index: 100;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .header-logo-wrapper:hover {
+      transform: scale(1.02);
     }
     header img {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      background: white;
-      padding: 4px;
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(124, 58, 237, 0.2);
+      transition: all 0.2s;
+    }
+    header img:hover {
+      box-shadow: 0 6px 20px rgba(124, 58, 237, 0.3);
     }
     header strong {
-      font-size: 22px;
-      font-weight: 700;
-      color: white;
+      font-size: 24px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #7C3AED 0%, #EC4899 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.01em;
+    }
+    nav {
+      margin-left: auto;
+      display: flex;
+      gap: 8px;
     }
     nav a {
-      margin-left: 32px;
-      color: rgba(255, 255, 255, 0.9);
+      color: #4B5563;
       text-decoration: none;
       font-weight: 600;
       transition: all 0.2s;
       font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 12px;
+      position: relative;
     }
     nav a:hover {
-      color: white;
-      text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+      color: #7C3AED;
+      background: rgba(124, 58, 237, 0.08);
+    }
+    nav a:active {
+      transform: scale(0.98);
     }
 
     .hero {
@@ -316,9 +349,19 @@
     }
 
     @media (max-width: 640px) {
-      header { padding: 20px 16px; }
-      header strong { font-size: 18px; }
-      nav a { font-size: 14px; margin-left: 20px; }
+      header {
+        padding: 16px 20px;
+        margin: 16px 16px;
+        top: 16px;
+      }
+      header img { width: 44px; height: 44px; }
+      header strong { font-size: 19px; }
+      .header-logo-wrapper { gap: 12px; }
+      nav { gap: 4px; }
+      nav a {
+        font-size: 14px;
+        padding: 8px 12px;
+      }
       .hero h1 { font-size: 40px; }
       .hero p { font-size: 19px; margin-bottom: 40px; }
       .banner-container h2 { font-size: 32px; }
@@ -331,9 +374,11 @@
 </head>
 <body>
   <header>
-    <img src="/assets/logo.png" alt="MLCards logo" />
-    <strong>MLCards</strong>
-    <nav style="margin-left:auto">
+    <a href="/" class="header-logo-wrapper">
+      <img src="/assets/logo.png" alt="MLCards - Master ML & Data Science" />
+      <strong>MLCards</strong>
+    </a>
+    <nav>
       <a href="/about.html">About</a>
       <a href="/privacy.html">Privacy</a>
       <a href="#faq">FAQ</a>
