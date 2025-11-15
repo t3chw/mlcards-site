@@ -33,205 +33,299 @@
     "applicationCategory": "Education",
     "offers": { "@type": "Offer", "price": "0" },
     "url": "https://mlcards.co",
-    "installUrl": "https://play.google.com/store/apps/details?id=com.mlcards",
+    "installUrl": "https://play.google.com/store/apps/details?id=co.mlcards.app",
     "description": "Swipe flashcards to master Machine Learning, AI, and Data Science concepts quickly."
   }
   </script>
 
-  <!-- Enhanced CSS inspired by modern app landing pages -->
+  <!-- Premium Purple Theme matching MLCards App -->
   <style>
-    * { box-sizing: border-box; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, system-ui, sans-serif;
       margin: 0;
       color: #1a1a1a;
-      background: linear-gradient(180deg, #fffcf5 0%, #fff7ed 50%, #fef3f2 100%);
+      background: linear-gradient(180deg, #8B5CF6 0%, #7C3AED 100%);
       line-height: 1.6;
+      overflow-x: hidden;
     }
+
     header {
-      padding: 40px 24px;
-      max-width: 1200px;
+      padding: 24px 32px;
+      max-width: 1400px;
       margin: 0 auto;
       display: flex;
       align-items: center;
       gap: 16px;
       position: sticky;
       top: 0;
-      background: rgba(255, 252, 245, 0.9);
-      backdrop-filter: blur(10px);
+      background: rgba(139, 92, 246, 0.95);
+      backdrop-filter: blur(20px);
       z-index: 100;
-      border-radius: 0 0 20px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-    header img { width: 48px; height: 48px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    header strong { font-size: 20px; font-weight: 700; }
+    header img {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      background: white;
+      padding: 4px;
+    }
+    header strong {
+      font-size: 22px;
+      font-weight: 700;
+      color: white;
+    }
     nav a {
-      margin-left: 24px;
-      color: #1a1a1a;
+      margin-left: 32px;
+      color: rgba(255, 255, 255, 0.9);
       text-decoration: none;
       font-weight: 600;
-      transition: color 0.2s;
+      transition: all 0.2s;
       font-size: 16px;
     }
-    nav a:hover { color: #7c3aed; }
+    nav a:hover {
+      color: white;
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
 
     .hero {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 120px 24px;
+      padding: 100px 32px 80px;
       text-align: center;
     }
     .hero h1 {
-      font-size: 72px;
-      line-height: 1.1;
-      margin: 0 0 32px;
-      font-weight: 800;
-      background: linear-gradient(135deg, #7c3aed 0%, #ec4899 50%, #f97316 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      font-size: 80px;
+      line-height: 1.05;
+      margin: 0 0 28px;
+      font-weight: 900;
+      color: white;
+      text-shadow: 0 4px 30px rgba(0,0,0,0.2);
+      letter-spacing: -0.02em;
     }
     .hero p {
-      font-size: 24px;
-      color: #4a4a4a;
-      max-width: 800px;
-      margin: 0 auto 48px;
+      font-size: 26px;
+      color: rgba(255, 255, 255, 0.95);
+      max-width: 850px;
+      margin: 0 auto 56px;
       line-height: 1.5;
+      font-weight: 400;
     }
 
-    .cta-container { display: flex; gap: 20px; justify-content: center; align-items: center; flex-wrap: wrap; }
+    .cta-container {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 80px;
+    }
     .cta {
       display: inline-flex;
       align-items: center;
-      background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
-      color: white;
-      padding: 20px 50px;
-      border-radius: 20px;
-      font-weight: 700;
+      background: white;
+      color: #7C3AED;
+      padding: 22px 56px;
+      border-radius: 16px;
+      font-weight: 800;
       text-decoration: none;
-      font-size: 18px;
-      box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
-      transition: transform 0.2s, box-shadow 0.2s;
+      font-size: 19px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 2px solid white;
     }
     .cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 15px 40px rgba(124, 58, 237, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.35);
     }
     .subcta {
-      color: #7c3aed;
+      color: white;
       font-weight: 700;
       text-decoration: none;
-      font-size: 18px;
-      padding: 20px 40px;
-      border: 2px solid #7c3aed;
-      border-radius: 20px;
-      transition: all 0.2s;
+      font-size: 19px;
+      padding: 22px 48px;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      border-radius: 16px;
+      transition: all 0.3s;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
     }
     .subcta:hover {
-      background: #7c3aed;
-      color: white;
+      background: rgba(255, 255, 255, 0.2);
+      border-color: white;
+      transform: translateY(-3px);
     }
 
     .hero-image-container {
-      margin-top: 80px;
-      max-width: 900px;
+      margin-top: 0;
+      max-width: 400px;
       margin-left: auto;
       margin-right: auto;
     }
     .hero-image-container img {
       width: 100%;
+      border-radius: 32px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+    }
+
+    /* Feature Showcase Section */
+    .feature-showcase {
+      background: white;
+      padding: 120px 0;
+      margin: 0;
+    }
+    .feature-showcase h2 {
+      text-align: center;
+      font-size: 56px;
+      margin: 0 0 80px;
+      color: #1a1a1a;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+    .feature-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 80px;
+      align-items: start;
+    }
+    .feature-item {
+      text-align: center;
+    }
+    .feature-item img {
+      width: 100%;
+      max-width: 350px;
+      height: auto;
       border-radius: 24px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+      box-shadow: 0 20px 60px rgba(124, 58, 237, 0.2);
+      margin-bottom: 32px;
+      transition: transform 0.3s;
+    }
+    .feature-item img:hover {
+      transform: scale(1.02);
+    }
+    .feature-item h3 {
+      font-size: 28px;
+      margin: 0 0 16px;
+      font-weight: 800;
+      color: #1a1a1a;
+    }
+    .feature-item p {
+      font-size: 18px;
+      color: #6b7280;
+      line-height: 1.6;
+      max-width: 350px;
+      margin: 0 auto;
     }
 
     .banner-section {
-      background: linear-gradient(135deg, #fef3f2 0%, #fff7ed 100%);
+      background: linear-gradient(135deg, #F3E8FF 0%, #E9D5FF 100%);
       padding: 120px 0;
-      margin: 120px 0;
-      border-radius: 40px;
+      margin: 0;
     }
     .banner-container {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 32px;
     }
     .banner-container h2 {
       text-align: center;
-      font-size: 48px;
-      margin: 0 0 60px;
+      font-size: 52px;
+      margin: 0 0 64px;
       color: #1a1a1a;
-      font-weight: 800;
+      font-weight: 900;
       line-height: 1.2;
+      letter-spacing: -0.02em;
     }
     .banner-img {
       width: 100%;
       height: auto;
       border-radius: 24px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+      box-shadow: 0 30px 80px rgba(124, 58, 237, 0.25);
     }
 
     .features {
       max-width: 1200px;
-      margin: 120px auto;
-      padding: 0 24px 60px;
+      margin: 0 auto;
+      padding: 120px 32px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
+      gap: 40px;
+      background: white;
     }
     .card {
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(124, 58, 237, 0.1);
-      border-radius: 20px;
-      padding: 40px;
-      transition: all 0.3s;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      background: linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 100%);
+      border: 2px solid #E5E7EB;
+      border-radius: 24px;
+      padding: 48px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
     }
     .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(124, 58, 237, 0.15);
-      border-color: rgba(124, 58, 237, 0.3);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(124, 58, 237, 0.2);
+      border-color: #7C3AED;
     }
     .card h3 {
-      font-size: 24px;
-      margin: 0 0 16px;
-      font-weight: 700;
+      font-size: 26px;
+      margin: 0 0 20px;
+      font-weight: 800;
       color: #1a1a1a;
     }
     .card p {
       margin: 0;
-      color: #4a4a4a;
-      font-size: 16px;
-      line-height: 1.6;
+      color: #6b7280;
+      font-size: 17px;
+      line-height: 1.7;
     }
 
     .footer {
-      border-top: 1px solid rgba(124, 58, 237, 0.1);
-      color: #6b7280;
-      padding: 60px 24px;
+      background: #7C3AED;
+      color: rgba(255, 255, 255, 0.8);
+      padding: 80px 32px;
       text-align: center;
-      background: rgba(255, 255, 255, 0.5);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
-    .footer a { color: #7c3aed; text-decoration: none; font-weight: 600; }
-    .footer a:hover { text-decoration: underline; }
+    .footer a {
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      transition: opacity 0.2s;
+    }
+    .footer a:hover {
+      opacity: 0.8;
+    }
 
     @media (max-width: 980px) {
-      .hero { padding: 80px 24px; }
-      .hero h1 { font-size: 48px; }
-      .hero p { font-size: 20px; }
-      .features { grid-template-columns: 1fr; gap: 24px; }
-      .banner-container h2 { font-size: 36px; margin: 0 0 40px; }
-      .banner-section { padding: 80px 0; margin: 80px 0; border-radius: 24px; }
+      .hero { padding: 80px 24px 60px; }
+      .hero h1 { font-size: 52px; }
+      .hero p { font-size: 22px; }
+      .features { grid-template-columns: 1fr; gap: 32px; padding: 80px 24px; }
+      .banner-container h2 { font-size: 40px; margin: 0 0 48px; }
+      .banner-section { padding: 80px 0; }
+      .feature-showcase { padding: 80px 0; }
+      .feature-showcase h2 { font-size: 42px; margin: 0 0 60px; }
+      .feature-grid { gap: 60px; }
       .cta-container { flex-direction: column; }
       .cta, .subcta { width: 100%; max-width: 400px; justify-content: center; }
     }
 
     @media (max-width: 640px) {
-      header { padding: 24px 16px; }
-      .hero h1 { font-size: 36px; }
-      .hero p { font-size: 18px; }
-      .banner-container h2 { font-size: 28px; }
-      .card { padding: 24px; }
-      nav a { font-size: 14px; margin-left: 16px; }
+      header { padding: 20px 16px; }
+      header strong { font-size: 18px; }
+      nav a { font-size: 14px; margin-left: 20px; }
+      .hero h1 { font-size: 40px; }
+      .hero p { font-size: 19px; margin-bottom: 40px; }
+      .banner-container h2 { font-size: 32px; }
+      .feature-showcase h2 { font-size: 32px; }
+      .card { padding: 32px; }
+      .cta { padding: 18px 40px; font-size: 17px; }
+      .subcta { padding: 18px 36px; font-size: 17px; }
     }
   </style>
 </head>
@@ -247,20 +341,56 @@
   </header>
 
   <section class="hero">
-    <h1>Learn Machine Learning the Smart Way</h1>
-    <p>Swipe through concise flashcards covering Machine Learning, AI, and Data Science. Master interview concepts with spaced repetition and quick drills.</p>
+    <h1>Master ML & Data Science</h1>
+    <p>TikTok-style learning with 1000+ flashcards. Swipe through ML concepts, algorithms, and interview prep in bite-sized cards.</p>
     <div class="cta-container">
-      <a class="cta" href="https://play.google.com/store/apps/details?id=com.mlcards" rel="noopener" target="_blank">Get it on Google Play</a>
-      <a class="subcta" href="#features">See features ↓</a>
+      <a class="cta" href="https://play.google.com/store/apps/details?id=co.mlcards.app" rel="noopener" target="_blank">Download for Android</a>
+      <a class="subcta" href="#features">Explore Features</a>
     </div>
     <div class="hero-image-container">
-      <img src="/assets/preview.png" alt="Preview of the MLCards app interface" />
+      <img src="/assets/screenshot-1.png" alt="MLCards App - Get Started with Google" />
+    </div>
+  </section>
+
+  <section class="feature-showcase">
+    <h2>Everything You Need to Ace Your ML Interviews</h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <img src="/assets/screenshot-2.png" alt="Swipe through 1000+ flashcards" />
+        <h3>Swipe Through 1000+ Flashcards</h3>
+        <p>TikTok-style learning. Just swipe to master ML concepts one card at a time.</p>
+      </div>
+      <div class="feature-item">
+        <img src="/assets/screenshot-3.png" alt="Rich content with math, code, and diagrams" />
+        <h3>Rich Content - Math, Code & Diagrams</h3>
+        <p>Beautiful LaTeX math rendering, syntax-highlighted code, and visual diagrams.</p>
+      </div>
+      <div class="feature-item">
+        <img src="/assets/screenshot-4.png" alt="Browse 20+ ML and DS topics" />
+        <h3>Browse 20+ ML & DS Topics</h3>
+        <p>Organized by categories: Deep Learning, Machine Learning, Statistics, and Interview Prep.</p>
+      </div>
+      <div class="feature-item">
+        <img src="/assets/screenshot-5.png" alt="Search 1000+ cards instantly" />
+        <h3>Search 1000+ Cards Instantly</h3>
+        <p>Find exactly what you need with powerful instant search across all flashcards.</p>
+      </div>
+      <div class="feature-item">
+        <img src="/assets/screenshot-6.png" alt="Save your favorite cards" />
+        <h3>Save Your Favorite Cards</h3>
+        <p>Bookmark important concepts and build your personalized study collection.</p>
+      </div>
+      <div class="feature-item">
+        <img src="/assets/screenshot-7.png" alt="Beautiful LaTeX math rendering" />
+        <h3>Beautiful LaTeX Math Rendering</h3>
+        <p>Professional mathematical notation that's easy to read and understand.</p>
+      </div>
     </div>
   </section>
 
   <section class="banner-section">
     <div class="banner-container">
-      <h2>Everything You Need to Master ML & Data Science</h2>
+      <h2>All Features at a Glance</h2>
       <img class="banner-img" src="/assets/banner_first_version.jpg" alt="MLCards app features showcase - swipe flashcards, rich content with math and code, browse ML topics, search cards, save favorites, track progress, and beautiful LaTeX rendering" />
     </div>
   </section>
