@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "co.mlcards.app",
+      "sha256_cert_fingerprints": [
+        "6A:09:3D:F6:D2:DF:6F:B7:41:69:4E:00:A4:7C:C5:20:B2:18:82:F7:6B:24:5D:AE:FC:A7:6C:3F:12:CB:68:EF"
+      ]
+    }
+  }
+]
